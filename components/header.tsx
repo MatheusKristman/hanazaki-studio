@@ -2,28 +2,45 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 import { MobileMenu } from "./mobile-menu";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
+import {
+  LogoAnimation,
+  MenuAnimation,
+} from "@/constants/framer/header-animations";
 
 export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full px-6 py-6 flex items-center justify-between sm:px-16 sm:py-9 lg:container lg:mx-auto">
-      <Link href="/" className="relative w-14 h-11 sm:w-24 sm:h-20">
-        <Image
-          src="/images/logo.svg"
-          alt="Hanazaki Studio"
-          fill
-          className="object-contain object-center"
-        />
-      </Link>
+    <header className="w-full px-6 py-6 flex items-center justify-between absolute top-0 left-1/2 -translate-x-1/2 z-40 overflow-x-hidden sm:px-16 sm:py-9 lg:container lg:mx-auto">
+      <motion.div
+        className="w-14 h-11 sm:w-24 sm:h-20"
+        initial="initial"
+        animate="animate"
+        variants={LogoAnimation}
+      >
+        <Link href="/" className="relative block w-full h-full">
+          <Image
+            src="/images/logo.svg"
+            alt="Hanazaki Studio"
+            fill
+            className="object-contain object-center"
+          />
+        </Link>
+      </motion.div>
 
       <MobileMenu />
 
-      <nav className="hidden lg:flex items-center justify-end gap-x-12">
+      <motion.nav
+        initial="initial"
+        animate="animate"
+        variants={MenuAnimation}
+        className="hidden lg:flex items-center justify-end gap-x-12"
+      >
         <Link
           href="/"
           className={cn(
@@ -31,7 +48,7 @@ export function Header() {
             {
               "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                 pathname === "/",
-            }
+            },
           )}
         >
           Inicio
@@ -44,7 +61,7 @@ export function Header() {
             {
               "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                 pathname === "/sobre",
-            }
+            },
           )}
         >
           Sobre
@@ -57,7 +74,7 @@ export function Header() {
             {
               "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                 pathname === "/projetos",
-            }
+            },
           )}
         >
           Projetos
@@ -66,12 +83,12 @@ export function Header() {
         <Link
           href="/contato"
           className={cn(
-            "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-opacity hover:opacity-80"
+            "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-opacity hover:opacity-80",
           )}
         >
           Contato
         </Link>
-      </nav>
+      </motion.nav>
     </header>
   );
 }

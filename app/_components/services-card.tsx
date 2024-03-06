@@ -1,5 +1,10 @@
-import { cn } from "@/lib/utils";
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
+import { ServicesCardAnimation } from "@/constants/framer/services-animation";
 
 interface ServicesCardProps {
   title: string;
@@ -15,10 +20,11 @@ export function ServicesCard({
   className,
 }: ServicesCardProps) {
   return (
-    <div
+    <motion.div
+      variants={ServicesCardAnimation}
       className={cn(
         "bg-gray-secondary w-full rounded-lg px-6 pt-9 flex flex-col items-center justify-between gap-y-4 sm:items-start",
-        className
+        className,
       )}
     >
       <h4 className="poppins-font text-xl text-gold-primary text-center font-semibold sm:text-2xl sm:text-left">
@@ -37,6 +43,6 @@ export function ServicesCard({
           className="object-bottom object-contain"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

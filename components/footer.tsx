@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { FooterForm } from "./footer-form";
+
 export function Footer() {
   return (
     <footer className="w-full mt-12 sm:mt-24">
-      <div className="w-full flex flex-col items-center sm:flex-row sm:px-16 sm:justify-between lg:container lg:mx-auto">
+      <div className="w-full px-6 flex flex-col items-center sm:flex-row sm:gap-x-5 sm:px-16 sm:justify-between lg:container lg:mx-auto">
         <Link
           href="/"
           className="relative w-24 h-24 mb-4 sm:mt-0 sm:w-36 sm:h-32 lg:w-56 lg:h-56"
@@ -17,9 +19,13 @@ export function Footer() {
           />
         </Link>
 
-        <div>form</div>
+        <div className="hidden sm:block sm:bg-gold-primary sm:w-[1px] sm:min-w-[1px] sm:h-56" />
 
-        <div className="flex items-center justify-center gap-12 pt-4 border-t border-gold-primary px-6 sm:border-t-0 sm:border-l sm:flex-col sm:items-start sm:pt-0">
+        <FooterForm />
+
+        <div className="w-full h-[1px] bg-gold-primary sm:w-[1px] sm:min-w-[1px] sm:h-56" />
+
+        <div className="flex items-center justify-center gap-12 pt-4 px-6 sm:flex-col sm:items-start sm:p-0">
           <a
             href="#whatsapp"
             target="_blank"
