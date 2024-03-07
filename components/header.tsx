@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { MobileMenu } from "./mobile-menu";
 import { cn } from "@/lib/utils";
@@ -11,84 +11,93 @@ import {
   LogoAnimation,
   MenuAnimation,
 } from "@/constants/framer/header-animations";
+import { useEffect, useState } from "react";
 
 export function Header() {
   const pathname = usePathname();
 
+  const [initialAnimation, setInitialAnimation] = useState<boolean>(true);
+
+  useEffect(() => {
+    setInitialAnimation(true);
+  }, []);
+
   return (
-    <header className="w-full px-6 py-6 flex items-center justify-between absolute top-0 left-1/2 -translate-x-1/2 z-40 overflow-x-hidden sm:px-16 sm:py-9 lg:container lg:mx-auto">
-      <motion.div
-        className="w-14 h-11 sm:w-24 sm:h-20"
-        initial="initial"
-        animate="animate"
-        variants={LogoAnimation}
-      >
-        <Link href="/" className="relative block w-full h-full">
-          <Image
-            src="/images/logo.svg"
-            alt="Hanazaki Studio"
-            fill
-            className="object-contain object-center"
-          />
-        </Link>
-      </motion.div>
-
-      <MobileMenu />
-
-      <motion.nav
-        initial="initial"
-        animate="animate"
-        variants={MenuAnimation}
-        className="hidden lg:flex items-center justify-end gap-x-12"
-      >
-        <Link
-          href="/"
-          className={cn(
-            "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
-            {
-              "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
-                pathname === "/",
-            },
-          )}
+    <AnimatePresence initial={initialAnimation}>
+      <header className="w-full px-6 py-6 flex items-center justify-between absolute top-0 left-1/2 -translate-x-1/2 z-40 overflow-x-hidden sm:px-16 sm:py-9 lg:container lg:mx-auto">
+        <motion.div
+          className="w-14 h-11 sm:w-24 sm:h-20"
+          initial="initial"
+          animate="animate"
+          variants={LogoAnimation}
         >
-          Inicio
-        </Link>
+          <Link href="/" className="relative block w-full h-full">
+            <Image
+              src="/images/logo.svg"
+              alt="Hanazaki Studio"
+              fill
+              className="object-contain object-center"
+            />
+          </Link>
+        </motion.div>
 
-        <Link
-          href="/sobre"
-          className={cn(
-            "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
-            {
-              "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
-                pathname === "/sobre",
-            },
-          )}
-        >
-          Sobre
-        </Link>
+        <MobileMenu />
 
-        <Link
-          href="/projetos"
-          className={cn(
-            "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
-            {
-              "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
-                pathname === "/projetos",
-            },
-          )}
+        <motion.nav
+          initial="initial"
+          animate="animate"
+          variants={MenuAnimation}
+          className="hidden lg:flex items-center justify-end gap-x-12"
         >
-          Projetos
-        </Link>
+          <Link
+            href="/"
+            className={cn(
+              "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
+              {
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                  pathname === "/",
+              },
+            )}
+          >
+            Inicio
+          </Link>
 
-        <Link
-          href="/contato"
-          className={cn(
-            "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-opacity hover:opacity-80",
-          )}
-        >
-          Contato
-        </Link>
-      </motion.nav>
-    </header>
+          <Link
+            href="/sobre"
+            className={cn(
+              "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
+              {
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                  pathname === "/sobre",
+              },
+            )}
+          >
+            Sobre
+          </Link>
+
+          <Link
+            href="/projetos"
+            className={cn(
+              "poppins-font text-xl font-medium text-light-primary transition-opacity hover:opacity-80",
+              {
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                  pathname === "/projetos",
+              },
+            )}
+          >
+            Projetos
+          </Link>
+
+          <Link
+            href="/contato"
+            className={cn(
+              "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-opacity hover:opacity-80",
+            )}
+          >
+            Contato
+          </Link>
+        </motion.nav>
+      </header>
+    </AnimatePresence>
   );
 }

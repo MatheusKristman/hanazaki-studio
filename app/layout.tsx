@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
 
-import "./globals.css";
+import "@/app/globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
