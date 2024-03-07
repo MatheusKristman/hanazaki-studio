@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { CardAnimation } from "@/constants/framer/about-animation";
+import { CardAnimation } from "@/constants/framer/about-animations";
 
 export function About() {
   return (

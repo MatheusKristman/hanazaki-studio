@@ -4,13 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import { ServicesCardAnimation } from "@/constants/framer/services-animation";
+import { ServicesCardAnimation } from "@/constants/framer/services-animations";
 
 interface ServicesCardProps {
   title: string;
   desc: string;
   imageUrl: string;
   className: string;
+  imageClassName?: string;
 }
 
 export function ServicesCard({
@@ -18,6 +19,7 @@ export function ServicesCard({
   desc,
   imageUrl,
   className,
+  imageClassName = "",
 }: ServicesCardProps) {
   return (
     <motion.div
@@ -35,7 +37,12 @@ export function ServicesCard({
         {desc}
       </p>
 
-      <div className="relative w-full aspect-video max-w-lg sm:mx-auto">
+      <div
+        className={cn(
+          "relative w-full aspect-video max-w-lg sm:mx-auto",
+          imageClassName,
+        )}
+      >
         <Image
           src={imageUrl}
           alt={title}

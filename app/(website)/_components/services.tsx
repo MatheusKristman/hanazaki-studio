@@ -6,7 +6,7 @@ import { ServicesCard } from "./services-card";
 import {
   ServicesTitleAnimation,
   ServicesContainerAnimation,
-} from "@/constants/framer/services-animation";
+} from "@/constants/framer/services-animations";
 
 const ServicesData = [
   {
@@ -14,30 +14,35 @@ const ServicesData = [
     desc: "Maquetes interativas com possibilidade de rodar em tv com tela touch para stands de vendas.",
     imageUrl: "/images/tv-touch.png",
     className: "sm:col-start-1 sm:col-end-3",
+    imageClassName: "mb-4",
   },
   {
     title: "Realidade Virtual",
     desc: "Nosso software é baseado em realidade virtual para criar uma imersão totalmente diferente.",
     imageUrl: "/images/vr.png",
     className: "",
+    imageClassName: "mb-4",
   },
   {
     title: "Nuvem",
     desc: "Software executado na nuvem, possibilitando o usuário interagir através do smartphone, tablet ou computador.",
     imageUrl: "/images/nuvem.png",
     className: "",
+    imageClassName: "",
   },
   {
     title: "Projetos Externos",
     desc: "Visualizar as comodidades, entorno, pontos de interesse, e muito mais.",
     imageUrl: "/images/projetos-externos.png",
     className: "",
+    imageClassName: "",
   },
   {
     title: "Projetos Internos",
     desc: "Passeio interativo, personalização de móveis, materiais, cores, entre outros.",
     imageUrl: "/images/projetos-internos.png",
     className: "",
+    imageClassName: "",
   },
 ];
 
@@ -65,6 +70,7 @@ export function Services() {
             desc={service.desc}
             imageUrl={service.imageUrl}
             className={service.className}
+            imageClassName={service.imageClassName}
           />
         ))}
       </div>

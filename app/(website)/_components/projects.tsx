@@ -9,7 +9,7 @@ import {
   ContainerAnimation,
   IllustrationAnimation,
   TextAnimation,
-} from "@/constants/framer/projects-animation";
+} from "@/constants/framer/projects-animations";
 
 export function Projects() {
   const { scrollYProgress } = useScroll();

@@ -103,3 +103,21 @@
     --y-animate: -50%;
   }
 }
+
+.about-bio-animation {
+  --scale-initial: 0.7;
+  --x-initial: 0px;
+  --opacity-initial: 0;
+  --scale-animate: 1;
+  --x-animate: 0px;
+  --opacity-animate: 1;
+
+  @media (min-width: 640px) {
+    --scale-initial: 1;
+    --x-initial: 100%;
+    --opacity-initial: 1;
+    --scale-animate: 1;
+    --x-animate: 0px;
+    --opacity-animate: 1;
+  }
+}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { VideoAnimation } from "@/constants/framer/video-about-animation";
+import { VideoAnimation } from "@/constants/framer/video-about-animations";
 
 export function VideoAbout() {
   return (

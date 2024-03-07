@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import {
   Carousel,
   CarouselContent,
@@ -7,8 +10,11 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { AboutCard } from "./about-card";
-import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  CardsAnimation,
+  CardsContainerAnimation,
+} from "@/constants/framer/about-content-animations";
 
 const aboutData = [
   {
@@ -47,7 +53,13 @@ export function AboutCarousel() {
   }, [api]);
 
   return (
-    <div className="w-full mb-12 ">
+    <motion.div
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={CardsContainerAnimation}
+      className="w-full mb-12 "
+    >
       <Carousel setApi={setApi} className="sm:hidden">
         <CarouselContent>
           {aboutData.map((data, index) => (
@@ -59,14 +71,16 @@ export function AboutCarousel() {
       </Carousel>
 
       <div className="w-full flex items-center justify-center gap-x-1 mt-4 sm:hidden">
-        <div
+        <motion.div
+          variants={CardsAnimation}
           className={cn(
             "w-2 h-2 rounded-full bg-gray-secondary transition-colors",
             { "bg-gold-primary": current === 1 },
           )}
         />
 
-        <div
+        <motion.div
+          variants={CardsAnimation}
           className={cn(
             "w-2 h-2 rounded-full bg-gray-secondary transition-colors",
             { "bg-gold-primary": current === 2 },
@@ -78,6 +92,6 @@ export function AboutCarousel() {
         <AboutCard title={aboutData[0].title} text={aboutData[0].text} />
         <AboutCard title={aboutData[1].title} text={aboutData[1].text} />
       </div>
-    </div>
+    </motion.div>
   );
 }
