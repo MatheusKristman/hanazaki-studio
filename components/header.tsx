@@ -52,7 +52,7 @@ export function Header() {
           <Link
             href="/"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-opacity hover:after:w-4/5 hover:opacity-80 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
               {
                 "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/",
@@ -65,7 +65,7 @@ export function Header() {
           <Link
             href="/sobre"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-opacity hover:after:w-4/5 hover:opacity-80 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
               {
                 "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/sobre",
@@ -78,7 +78,7 @@ export function Header() {
           <Link
             href="/projetos"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-opacity hover:after:w-4/5 hover:opacity-80 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
               {
                 "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/projetos",
@@ -91,7 +91,7 @@ export function Header() {
           <Link
             href="/contato"
             className={cn(
-              "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-opacity hover:opacity-80",
+              "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-colors hover:border-gold-primary hover:text-gold-primary",
             )}
           >
             Contato
