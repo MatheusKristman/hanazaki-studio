@@ -16,7 +16,7 @@ export function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], ["-50%", "0%"]);
 
   return (
-    <section className="w-full mt-12 px-6 sm:px-16 lg:px-0">
+    <section className="w-full mt-12 px-6 overflow-x-hidden sm:px-16 lg:px-0">
       <motion.div
         initial="initial"
         whileInView="animate"

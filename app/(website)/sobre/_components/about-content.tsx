@@ -15,7 +15,7 @@ import {
 export function AboutContent() {
   return (
     <section className="w-full px-6 mt-12 sm:px-16 lg:container lg:mx-auto">
-      <motion.div className="w-full flex flex-col items-center gap-y-4 mb-12">
+      {/* <motion.div className="w-full flex flex-col items-center gap-y-4 mb-12">
         <motion.h2
           initial="initial"
           whileInView="animate"
@@ -38,7 +38,7 @@ export function AboutContent() {
           nunca sermos deixados para trás. Além disso, mudanças são comuns,
           porém nenhum conhecimento anterior é totalmente perdido.
         </motion.p>
-      </motion.div>
+      </motion.div> */}
 
       <AboutCarousel />
 

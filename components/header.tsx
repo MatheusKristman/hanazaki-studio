@@ -12,6 +12,7 @@ import {
   MenuAnimation,
 } from "@/constants/framer/header-animations";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 export function Header() {
   const pathname = usePathname();
@@ -24,7 +25,7 @@ export function Header() {
 
   return (
     <AnimatePresence initial={initialAnimation}>
-      <header className="w-full px-6 py-6 flex items-center justify-between absolute top-0 left-1/2 -translate-x-1/2 z-40 overflow-x-hidden sm:px-16 sm:py-9 lg:container lg:mx-auto">
+      <header className="w-full px-6 py-6 flex items-center justify-between absolute top-0 left-1/2 -translate-x-1/2 z-40 sm:px-16 sm:py-9 lg:container lg:mx-auto">
         <motion.div
           className="w-14 h-11 sm:w-24 sm:h-20"
           initial="initial"
@@ -52,11 +53,11 @@ export function Header() {
           <Link
             href="/"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-full after:content-[''] after:bg-light-primary after:w-0 after:h-[1px] after:absolute after:bottom-0 after:right-0",
               {
-                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-full after:h-[1px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/",
-              },
+              }
             )}
           >
             Inicio
@@ -65,38 +66,38 @@ export function Header() {
           <Link
             href="/sobre"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-full after:content-[''] after:bg-light-primary after:w-0 after:h-[1px] after:absolute after:bottom-0 after:right-0",
               {
-                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-full after:h-[1px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/sobre",
-              },
+              }
             )}
           >
             Sobre
           </Link>
 
-          <Link
+          {/* <Link
             href="/projetos"
             className={cn(
-              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-4/5 after:content-[''] after:bg-light-primary after:w-0 after:h-[2px] after:absolute after:bottom-0 after:right-0",
+              "relative poppins-font text-xl font-medium text-light-primary transition-all after:transition-all hover:after:w-full after:content-[''] after:bg-light-primary after:w-0 after:h-[1px] after:absolute after:bottom-0 after:right-0",
               {
-                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-4/5 after:h-[2px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
+                "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-full after:h-[1px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/projetos",
-              },
+              }
             )}
           >
             Projetos
-          </Link>
-
-          <Link
-            href="/contato"
-            className={cn(
-              "poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-colors hover:border-gold-primary hover:text-gold-primary",
-            )}
-          >
-            Contato
-          </Link>
+          </Link> */}
         </motion.nav>
+
+        <Button
+          variant="outline"
+          className={cn(
+            "bg-transparent hover:bg-transparent poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-colors hover:border-gold-primary hover:text-gold-primary hidden lg:flex"
+          )}
+        >
+          Contato
+        </Button>
       </header>
     </AnimatePresence>
   );

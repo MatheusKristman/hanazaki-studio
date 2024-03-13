@@ -7,11 +7,15 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-poppins",
+  display: "swap",
+  adjustFontFallback: false,
 });
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-manrope",
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {

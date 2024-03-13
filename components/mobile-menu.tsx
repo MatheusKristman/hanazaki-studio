@@ -29,7 +29,12 @@ export function MobileMenu() {
 
   return (
     <>
-      <motion.div initial="initial" animate="animate" variants={MenuAnimation}>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={MenuAnimation}
+        className="block lg:hidden"
+      >
         <Button
           size="icon"
           variant="link"
@@ -47,7 +52,7 @@ export function MobileMenu() {
             animate="animate"
             exit="exit"
             variants={OverlayAnimaiton}
-            className="w-screen h-screen px-6 py-6 bg-gray-secondary fixed top-0 left-0 right-0 bottom-0 z-50 sm:px-16 sm:py-14 lg:hidden"
+            className="w-screen h-screen px-6 py-6 bg-gray-secondary fixed overflow-x-hidden top-0 left-0 right-0 bottom-0 z-50 sm:px-16 sm:py-14 lg:hidden"
           >
             <div className="w-full h-full flex flex-col">
               <div className="w-full flex justify-end items-center">
@@ -65,7 +70,7 @@ export function MobileMenu() {
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/",
-                      },
+                      }
                     )}
                   >
                     Inicio
@@ -80,14 +85,14 @@ export function MobileMenu() {
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/sobre",
-                      },
+                      }
                     )}
                   >
                     Sobre
                   </Link>
                 </motion.div>
 
-                <motion.div variants={MobileLinksAnimation}>
+                {/* <motion.div variants={MobileLinksAnimation}>
                   <Link
                     href="/projetos"
                     className={cn(
@@ -95,12 +100,12 @@ export function MobileMenu() {
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/projetos",
-                      },
+                      }
                     )}
                   >
                     Projetos
                   </Link>
-                </motion.div>
+                </motion.div> */}
 
                 {/* TODO confirmar se o botão contato vai jogar para o footer */}
                 <motion.div variants={MobileLinksAnimation}>
@@ -111,7 +116,7 @@ export function MobileMenu() {
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/contato",
-                      },
+                      }
                     )}
                   >
                     Contato

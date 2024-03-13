@@ -4,65 +4,100 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import {
-  TextAnimation,
-  IllustrationDesktopAnimation,
+  ContainerAnimation,
+  SubTitleAnimation,
+  TagAnimation,
+  TitleAnimation,
+  SubTitleLineAnimation,
+  SubTitleItemAnimation,
 } from "@/constants/framer/hero-animations";
+import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
 
   return (
-    <section className="w-full px-6 mt-36 flex flex-col items-center gap-y-6 sm:px-16 sm:flex-row sm:justify-between sm:mt-56 sm:relative lg:container lg:mx-auto lg:mt-0 lg:h-screen">
-      <motion.div
-        initial="initial"
-        animate="animate"
-        variants={TextAnimation}
-        className="w-full flex flex-col items-center justify-center gap-y-2 sm:w-4/6 sm:items-start sm:relative sm:z-10 lg:w-3/5 lg:gap-y-4"
-      >
-        <h1 className="poppins-font text-4xl text-light-primary font-medium text-center sm:text-left lg:text-6xl">
-          Onde a busca pelo excepcional redefine o padrão do mercado.
-        </h1>
+    <section className="w-full h-screen relative">
+      <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10 after:bg-gradient-to-b from-[#0e0e0e]/70 via-[#0e0e0e]/70 to-[#0e0e0e]">
+        {/* TODO adicionar o video depois */}
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Hanazaki Studio"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
 
-        <div className="flex items-center justify-center gap-x-2 sm:justify-start">
-          <p className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl">
-            Tecnologia
-          </p>
-
-          <div className="h-6 w-[1px] bg-gold-primary lg:h-8" />
-
-          <p className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl">
-            Interatividade
-          </p>
-
-          <div className="h-6 w-[1px] bg-gold-primary lg:h-8" />
-
-          <p className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl">
-            Realidade virtual
-          </p>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial="initial"
-        animate="animate"
-        variants={IllustrationDesktopAnimation}
-        className="hero-illustration-animation w-full relative flex justify-center items-center py-4 sm:absolute sm:top-0 sm:right-16 sm:w-2/5 sm:aspect-square sm:justify-end lg:w-1/2 lg:top-1/2 lg:-translate-y-1/2"
-      >
-        <div className="w-4/5 h-36 bg-gray-secondary rounded-lg sm:h-3/5" />
-
+      <div className="relative z-20 w-full h-full px-6 flex flex-col justify-center sm:px-16 lg:container lg:mx-auto">
         <motion.div
-          style={{ y }}
-          className="absolute top-0 left-0 w-full h-full"
+          initial="initial"
+          animate="animate"
+          variants={ContainerAnimation}
+          className="w-full flex flex-col items-center justify-center gap-y-6 sm:items-center"
         >
-          <Image
-            src="/images/hero.png"
-            alt="Onde a busca pelo excepcional redefine o padrão do mercado."
-            fill
-            className="object-center object-contain"
-          />
+          <motion.div
+            variants={TagAnimation}
+            className="flex items-center justify-center gap-x-1 bg-gold-primary/25 px-4 py-1 rounded-md cursor-default"
+          >
+            <span className="uppercase poppins-font font-semibold !leading-none text-gold-primary text-sm text-center sm:mt-[2px] sm:text-base">
+              Mergulhe na Futura Arquitetura
+            </span>
+            <ArrowUpRight color="#B9A568" />
+          </motion.div>
+
+          <motion.h1
+            variants={TitleAnimation}
+            className="poppins-font text-4xl text-light-primary font-semibold text-center sm:text-5xl lg:text-7xl lg:leading-[1.1]"
+          >
+            Onde a busca pelo{" "}
+            <strong className="font-semibold bg-gradient-to-b from-[#D1BC7D] to-[#534A2F] inline-block text-transparent bg-clip-text">
+              excepcional
+            </strong>{" "}
+            redefine o{" "}
+            <strong className="font-semibold bg-gradient-to-b from-[#D1BC7D] to-[#534A2F] inline-block text-transparent bg-clip-text">
+              padrão
+            </strong>{" "}
+            do mercado.
+          </motion.h1>
+
+          <motion.div
+            variants={SubTitleAnimation}
+            className="w-full overflow-hidden flex items-center justify-center gap-x-2 sm:gap-x-4 before:content-[''] before:h-[1px] before:basis-full before:bg-gold-primary after:content-[''] after:h-[1px] after:basis-full after:bg-gold-primary"
+          >
+            <motion.p
+              variants={SubTitleItemAnimation}
+              className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl"
+            >
+              Tecnologia
+            </motion.p>
+
+            <motion.div
+              variants={SubTitleLineAnimation}
+              className="h-6 w-[1px] bg-gold-primary lg:h-8"
+            />
+
+            <motion.p
+              variants={SubTitleItemAnimation}
+              className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl"
+            >
+              Interatividade
+            </motion.p>
+
+            <motion.div
+              variants={SubTitleLineAnimation}
+              className="h-6 w-[1px] bg-gold-primary lg:h-8"
+            />
+
+            <motion.p
+              variants={SubTitleItemAnimation}
+              className="manrope-font text-sm text-light-primary text-nowrap sm:text-base lg:text-xl"
+            >
+              Realidade virtual
+            </motion.p>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
