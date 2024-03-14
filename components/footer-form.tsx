@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Element } from "react-scroll";
 
 import { footerFormSchema } from "@/constants/schemas/footer-form-schema";
 import { Button } from "@/components/ui/button";
@@ -32,71 +33,70 @@ export function FooterForm() {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="mb-4 flex-grow max-w-md"
-      >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem className="mb-4">
-              <FormLabel className="poppins-font text-base font-medium text-light-primary">
-                Nome
-              </FormLabel>
+      <Element name="contact" className="mb-4 flex-grow max-w-md">
+        <form id="contact" onSubmit={form.handleSubmit(onSubmit)}>
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem className="mb-4">
+                <FormLabel className="poppins-font text-base font-medium text-light-primary">
+                  Nome
+                </FormLabel>
 
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
 
-              <FormMessage className="poppins-font text-sm" />
-            </FormItem>
-          )}
-        />
+                <FormMessage className="poppins-font text-sm" />
+              </FormItem>
+            )}
+          />
 
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="mb-4">
-              <FormLabel className="poppins-font text-base font-medium text-light-primary">
-                E-mail
-              </FormLabel>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="mb-4">
+                <FormLabel className="poppins-font text-base font-medium text-light-primary">
+                  E-mail
+                </FormLabel>
 
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
 
-              <FormMessage className="poppins-font text-sm" />
-            </FormItem>
-          )}
-        />
+                <FormMessage className="poppins-font text-sm" />
+              </FormItem>
+            )}
+          />
 
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem className="mb-6">
-              <FormLabel className="poppins-font text-base font-medium text-light-primary">
-                Mensagem
-              </FormLabel>
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem className="mb-6">
+                <FormLabel className="poppins-font text-base font-medium text-light-primary">
+                  Mensagem
+                </FormLabel>
 
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
 
-              <FormMessage className="poppins-font text-sm" />
-            </FormItem>
-          )}
-        />
+                <FormMessage className="poppins-font text-sm" />
+              </FormItem>
+            )}
+          />
 
-        <Button
-          type="submit"
-          className="block mx-auto poppins-font text-base font-bold"
-        >
-          Enviar
-        </Button>
-      </form>
+          <Button
+            type="submit"
+            className="block mx-auto poppins-font text-base font-bold"
+          >
+            Enviar
+          </Button>
+        </form>
+      </Element>
     </Form>
   );
 }

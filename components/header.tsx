@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link as LinkScroll } from "react-scroll";
 
 import { MobileMenu } from "./mobile-menu";
 import { cn } from "@/lib/utils";
@@ -12,7 +13,6 @@ import {
   MenuAnimation,
 } from "@/constants/framer/header-animations";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 
 export function Header() {
   const pathname = usePathname();
@@ -22,6 +22,10 @@ export function Header() {
   useEffect(() => {
     setInitialAnimation(true);
   }, []);
+
+  function handleContact() {
+    location.hash = "#contact";
+  }
 
   return (
     <AnimatePresence initial={initialAnimation}>
@@ -57,7 +61,7 @@ export function Header() {
               {
                 "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-full after:h-[1px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/",
-              }
+              },
             )}
           >
             Inicio
@@ -70,7 +74,7 @@ export function Header() {
               {
                 "text-gold-primary relative after:content-[''] after:bg-gold-primary after:w-full after:h-[1px] after:absolute after:bottom-0 after:right-0 hover:opacity-100 pointer-event-none":
                   pathname === "/sobre",
-              }
+              },
             )}
           >
             Sobre
@@ -90,14 +94,17 @@ export function Header() {
           </Link> */}
         </motion.nav>
 
-        <Button
-          variant="outline"
+        <LinkScroll
+          to="contact"
+          smooth
+          offset={50}
+          onClick={handleContact}
           className={cn(
-            "bg-transparent hover:bg-transparent poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-colors hover:border-gold-primary hover:text-gold-primary hidden lg:flex"
+            "cursor-pointer bg-transparent hover:bg-transparent poppins-font text-lg font-medium text-light-primary px-6 py-1 border-2 border-light-primary rounded-md transition-solors hover:border-gold-primary hover:text-gold-primary hidden lg:flex",
           )}
         >
           Contato
-        </Button>
+        </LinkScroll>
       </header>
     </AnimatePresence>
   );
