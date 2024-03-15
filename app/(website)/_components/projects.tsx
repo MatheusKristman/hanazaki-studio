@@ -49,17 +49,19 @@ export function Projects() {
             variants={TextAnimation}
             className="poppins-font text-2xl text-gold-primary mb-2 sm:text-3xl lg:text-4xl"
           >
-            Nome do projeto
+            Projeto R.P
           </motion.h4>
 
           <motion.p
             variants={TextAnimation}
             className="manrope-font text-base text-light-primary mb-4 sm:text-lg lg:mb-12"
           >
-            Lorem ipsum dolor sit amet consectetur. Dui aliquam id maecenas
-            massa egestas laoreet malesuada accumsan tincidunt. Arcu in id ac
-            nisl. Leo elementum felis elementum volutpat porttitor interdum.
-            Fermentum nisi non aliquam consequat lacus.
+            Um projeto completo que fornece informações do entorno, comodidades
+            e galeria. Além de uma aba de busca de unidades atualizada em tempo
+            real. Com passeios virtuais integrados para explorar áreas comuns e
+            apartamentos, com opções de interação, como mudanças de
+            revestimentos, mobiliário e cores, além de um modo de visualização
+            aérea para uma perspectiva geral.
           </motion.p>
 
           <motion.div variants={TextAnimation}>
@@ -67,7 +69,7 @@ export function Projects() {
               href="/projetos"
               className="poppins-font text-lg font-medium text-light-primary/60 flex items-center gap-x-2 sm:text-xl"
             >
-              Mais projetos <ArrowRight />
+              Veja mais <ArrowRight />
             </Link>
           </motion.div>
         </motion.div>

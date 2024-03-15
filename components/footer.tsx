@@ -27,7 +27,7 @@ export function Footer() {
 
         <div className="flex items-center justify-center gap-12 pt-4 px-6 sm:flex-col sm:items-start sm:p-0">
           <a
-            href="#whatsapp"
+            href="https://wa.me/5516997054012?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+seu+servi%C3%A7o."
             target="_blank"
             rel="noreferrer noopenner"
             className="relative block w-8 h-8 sm:hidden"
@@ -41,7 +41,7 @@ export function Footer() {
           </a>
 
           <a
-            href="#whatsapp"
+            href="https://wa.me/5516997054012?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+seu+servi%C3%A7o."
             target="_blank"
             rel="noreferrer noopenner"
             className="hidden sm:flex items-center gap-4"
@@ -55,12 +55,12 @@ export function Footer() {
             />
 
             <span className="manrope-font text-base text-light-primary">
-              (11) 99999-9999
+              (16) 99705 - 4012
             </span>
           </a>
 
           <a
-            href="#instagram"
+            href="https://www.instagram.com/hanazaki_studio/"
             target="_blank"
             rel="noreferrer noopenner"
             className="relative block w-8 h-8 sm:hidden"
@@ -74,7 +74,7 @@ export function Footer() {
           </a>
 
           <a
-            href="#instagram"
+            href="https://www.instagram.com/hanazaki_studio/"
             target="_blank"
             rel="noreferrer noopenner"
             className="hidden sm:flex items-center gap-4"
@@ -93,7 +93,7 @@ export function Footer() {
           </a>
 
           <a
-            href="#linkedin"
+            href="https://www.linkedin.com/in/leonardo-hanazaki-50468a240/"
             target="_blank"
             rel="noreferrer noopenner"
             className="relative block w-8 h-8 sm:hidden"
@@ -107,7 +107,7 @@ export function Footer() {
           </a>
 
           <a
-            href="#linkedin"
+            href="https://www.linkedin.com/in/leonardo-hanazaki-50468a240/"
             target="_blank"
             rel="noreferrer noopenner"
             className="hidden sm:flex items-center gap-4"
@@ -121,7 +121,7 @@ export function Footer() {
             />
 
             <span className="manrope-font text-base text-light-primary">
-              leonardohanazaki
+              Leonardo Hanazaki
             </span>
           </a>
         </div>
