@@ -12,7 +12,7 @@ const ServicesData = [
   {
     title: "Tv touch",
     desc: "Com nossos projetos em TV Touch, você pode criar um ambiente de vendas envolvente e memorável para seus clientes.",
-    imageUrl: "/images/tv-touch.png",
+    imageUrl: "/images/tv-touch.webp",
     className: "sm:col-start-1 sm:col-end-3",
     imageClassName: "mb-4",
   },

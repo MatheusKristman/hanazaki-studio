@@ -10,6 +10,7 @@ import {
   IllustrationAnimation,
   TextAnimation,
 } from "@/constants/framer/projects-animations";
+import { project } from "@/constants/project-example";
 
 export function Projects() {
   const { scrollYProgress } = useScroll();
@@ -36,7 +37,7 @@ export function Projects() {
               src="/images/projects.png"
               alt="Projetos"
               fill
-              className="object-cover object-center"
+              className="object-cover object-right-top"
             />
           </motion.div>
         </motion.div>
@@ -66,7 +67,7 @@ export function Projects() {
 
           <motion.div variants={TextAnimation}>
             <Link
-              href="/projetos"
+              href={`/projetos/detalhes/${project.id}`}
               className="poppins-font text-lg font-medium text-light-primary/60 flex items-center gap-x-2 sm:text-xl"
             >
               Veja mais <ArrowRight />
