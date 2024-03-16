@@ -19,10 +19,10 @@ export function ProjectContent() {
 
       <div className="w-full aspect-video">
         <iframe
-          className="w-full h-full"
           id="vagonFrame"
           allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;"
           src={project.frameUrl}
+          sandbox="allow-pointer-lock"
         />
       </div>
     </section>
