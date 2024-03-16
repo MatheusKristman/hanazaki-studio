@@ -22,7 +22,7 @@ export function ProjectContent() {
           id="vagonFrame"
           allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;"
           src={project.frameUrl}
-          sandbox="allow-pointer-lock"
+          sandbox="allow-pointer-lock allow-same-origin allow-scripts"
           className="w-full h-full"
         />
       </div>
