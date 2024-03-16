@@ -23,6 +23,7 @@ export function ProjectContent() {
           allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;"
           src={project.frameUrl}
           sandbox="allow-pointer-lock"
+          className="w-full h-full"
         />
       </div>
     </section>

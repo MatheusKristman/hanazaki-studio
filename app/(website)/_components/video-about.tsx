@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
+import { MouseEventHandler, SyntheticEvent, useState } from "react";
 
 import {
   LineAnimation,
@@ -13,9 +14,19 @@ import {
 import { VideoModal } from "./video-modal";
 
 export function VideoAbout() {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  function OpenModal() {
+    setIsModalOpen(true);
+  }
+
+  function CloseModal(e: SyntheticEvent) {
+    setIsModalOpen(false);
+  }
+
   return (
     <>
-      <VideoModal />
+      <VideoModal isModalOpen={isModalOpen} CloseModal={CloseModal} />
 
       <section className="relative w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10">
         {/* TODO: inserir a imagem por enquanto depois pegar e colocar o video */}
@@ -27,6 +38,8 @@ export function VideoAbout() {
         />
 
         <motion.div
+          role="button"
+          onClick={OpenModal}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: "some" }}
