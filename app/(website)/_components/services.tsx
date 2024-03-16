@@ -28,21 +28,21 @@ const ServicesData = [
     desc: "Nossos projetos na nuvem permitem que seus clientes acessem diretamente a partir de seus dispositivos.",
     imageUrl: "/images/nuvem.png",
     className: "",
-    imageClassName: "",
+    imageClassName: "mb-4",
   },
   {
     title: "Projetos Externos",
     desc: "Com os projetos externos, é possível visualizar o entorno e as comodidades do empreendimento, proporcionando uma visão completa do ambiente ao redor.",
     imageUrl: "/images/projetos-externos.png",
     className: "",
-    imageClassName: "",
+    imageClassName: "mb-4",
   },
   {
     title: "Projetos Internos",
     desc: "Os ambientes internos proporcionam aos clientes a chance de deslumbrar-se com o novo imóvel, juntamente com a opção de personalização.",
     imageUrl: "/images/projetos-internos.png",
     className: "",
-    imageClassName: "",
+    imageClassName: "mb-4",
   },
 ];
 
