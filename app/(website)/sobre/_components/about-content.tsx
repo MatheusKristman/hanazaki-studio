@@ -73,6 +73,7 @@ export function AboutContent() {
             src="/images/about-international.svg"
             alt="Parcerias internacionais"
             fill
+            priority
             className="object-contain object-center"
           />
         </div>

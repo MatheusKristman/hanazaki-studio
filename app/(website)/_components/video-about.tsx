@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
+import AboutImage from "@/public/images/below-hero-example.jpg";
 import { MouseEventHandler, SyntheticEvent, useState } from "react";
 
 import {
@@ -31,9 +32,11 @@ export function VideoAbout() {
       <section className="relative z-30 w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-40">
         {/* TODO: inserir a imagem por enquanto depois pegar e colocar o video */}
         <Image
-          src="/images/below-hero-example.jpg"
+          src={AboutImage}
           alt="Exemplo"
           fill
+          priority
+          placeholder="blur"
           className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover object-center"
         />
 

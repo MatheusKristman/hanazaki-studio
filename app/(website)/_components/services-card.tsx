@@ -26,7 +26,7 @@ export function ServicesCard({
       variants={ServicesCardAnimation}
       className={cn(
         "bg-gray-secondary w-full rounded-lg px-6 pt-9 flex flex-col items-center justify-between gap-y-4 sm:items-start",
-        className,
+        className
       )}
     >
       <h4 className="poppins-font text-xl text-gold-primary text-center font-semibold sm:text-2xl sm:text-left">
@@ -40,13 +40,15 @@ export function ServicesCard({
       <div
         className={cn(
           "relative w-full aspect-video max-w-lg sm:mx-auto",
-          imageClassName,
+          imageClassName
         )}
       >
         <Image
           src={imageUrl}
           alt={title}
           fill
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-bottom object-contain"
         />
       </div>

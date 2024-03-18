@@ -11,6 +11,7 @@ import {
   TextAnimation,
 } from "@/constants/framer/projects-animations";
 import { project } from "@/constants/project-example";
+import ProjectImage from "@/public/images/projects.png";
 
 export function Projects() {
   const { scrollYProgress } = useScroll();
@@ -34,9 +35,12 @@ export function Projects() {
             className="relative w-full h-[calc(100%+200px)]"
           >
             <Image
-              src="/images/projects.png"
+              src={ProjectImage}
               alt="Projetos"
               fill
+              priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
               className="object-cover object-right-top"
             />
           </motion.div>

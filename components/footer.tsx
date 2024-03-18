@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FooterForm } from "./footer-form";
+import { SocialMediaLink } from "./social-media-link";
 
 export function Footer() {
   return (
@@ -26,104 +27,26 @@ export function Footer() {
         <div className="w-full h-[1px] bg-gold-primary sm:w-[1px] sm:min-w-[1px] sm:h-56" />
 
         <div className="flex items-center justify-center gap-12 pt-4 px-6 sm:flex-col sm:items-start sm:p-0">
-          <a
+          <SocialMediaLink
             href="https://wa.me/5516997054012?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+seu+servi%C3%A7o."
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="relative block w-8 h-8 sm:hidden"
-          >
-            <Image
-              src="/images/whatsapp.svg"
-              alt="Whatsapp"
-              fill
-              className="object-contain object-center"
-            />
-          </a>
+            alt="Whatsapp"
+            imageSrc="/images/whatsapp.svg"
+            text="(16) 99705 - 4012"
+          />
 
-          <a
-            href="https://wa.me/5516997054012?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+seu+servi%C3%A7o."
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="hidden sm:flex items-center gap-4"
-          >
-            <Image
-              src="/images/whatsapp.svg"
-              alt="Whatsapp"
-              width={36}
-              height={36}
-              className="object-contain object-center"
-            />
-
-            <span className="manrope-font text-base text-light-primary">
-              (16) 99705 - 4012
-            </span>
-          </a>
-
-          <a
+          <SocialMediaLink
             href="https://www.instagram.com/hanazaki_studio/"
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="relative block w-8 h-8 sm:hidden"
-          >
-            <Image
-              src="/images/instagram.svg"
-              alt="Instagram"
-              fill
-              className="object-contain object-center"
-            />
-          </a>
+            alt="Instagram"
+            imageSrc="/images/instagram.svg"
+            text="@hanazaki_studio"
+          />
 
-          <a
-            href="https://www.instagram.com/hanazaki_studio/"
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="hidden sm:flex items-center gap-4"
-          >
-            <Image
-              src="/images/instagram.svg"
-              alt="Instagram"
-              width={36}
-              height={36}
-              className="object-contain object-center"
-            />
-
-            <span className="manrope-font text-base text-light-primary">
-              @hanazaki_studio
-            </span>
-          </a>
-
-          <a
+          <SocialMediaLink
             href="https://www.linkedin.com/in/leonardo-hanazaki-50468a240/"
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="relative block w-8 h-8 sm:hidden"
-          >
-            <Image
-              src="/images/linkedin.svg"
-              alt="Linkedin"
-              fill
-              className="object-contain object-center"
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/leonardo-hanazaki-50468a240/"
-            target="_blank"
-            rel="noreferrer noopenner"
-            className="hidden sm:flex items-center gap-4"
-          >
-            <Image
-              src="/images/linkedin.svg"
-              alt="Linkedin"
-              width={36}
-              height={36}
-              className="object-contain object-center"
-            />
-
-            <span className="manrope-font text-base text-light-primary">
-              Leonardo Hanazaki
-            </span>
-          </a>
+            alt="Linkedin"
+            imageSrc="/images/linkedin.svg"
+            text="Leonardo Hanazaki"
+          />
         </div>
       </div>
 

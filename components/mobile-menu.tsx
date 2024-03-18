@@ -21,10 +21,6 @@ export function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
-    console.log(isAnimating);
-  }, [isAnimating]);
-
   function handleOpenMenu() {
     setIsMenuOpen(true);
     disableMouse();
@@ -107,7 +103,7 @@ export function MobileMenu() {
                       },
                       {
                         "pointer-events-none": isAnimating,
-                      },
+                      }
                     )}
                   >
                     Inicio
@@ -125,7 +121,7 @@ export function MobileMenu() {
                       },
                       {
                         "pointer-events-none": isAnimating,
-                      },
+                      }
                     )}
                   >
                     Sobre
@@ -161,7 +157,7 @@ export function MobileMenu() {
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/contato",
-                      },
+                      }
                     )}
                   >
                     Contato

@@ -61,6 +61,8 @@ export function AboutBio() {
               src="/images/leonardo-hanazaki.png"
               alt="Leonardo Hanazaki"
               fill
+              priority
+              sizes="(max-width: 768px) 33vw, (max-width: 1200px) 33vw, 33vw"
               className="object-cover object-top"
             />
           </div>
