@@ -20,14 +20,6 @@ export function Hero() {
   return (
     <section className="w-full h-screen relative">
       <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10 after:bg-gradient-to-b from-[#0e0e0e]/70 via-[#0e0e0e]/70 to-[#0e0e0e]">
-        {/* TODO adicionar o video depois */}
-        {/* <Image */}
-        {/*   src="/images/hero-bg.jpg" */}
-        {/*   alt="Hanazaki Studio" */}
-        {/*   fill */}
-        {/*   className="object-cover object-center" */}
-        {/* /> */}
-
         <video
           loop
           muted
@@ -43,7 +35,7 @@ export function Hero() {
           initial="initial"
           animate="animate"
           variants={ContainerAnimation}
-          className="w-full flex flex-col items-center justify-center gap-y-6 sm:items-center"
+          className="relative w-full flex flex-col items-center justify-center gap-y-6 sm:items-center after:content-[''] after:w-full after:aspect-square after:bg-glow-right after:bg-contain after:bg-center after:bg-no-repeat after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 lg:after:left-auto lg:after:-right-10 lg:after:translate-x-0 lg:after:-top-36 lg:after:translate-y-0 lg:after:w-2/3 before:content-[''] before:hidden lg:before:block lg:before:w-2/3 lg:before:aspect-square lg:before:bg-glow-left lg:before:bg-no-repeat lg:before:bg-contain lg:before:bg-center lg:before:absolute lg:before:-top-36 lg:before:-left-10"
         >
           <motion.div
             variants={TagAnimation}

@@ -28,7 +28,7 @@ export function VideoAbout() {
     <>
       <VideoModal isModalOpen={isModalOpen} CloseModal={CloseModal} />
 
-      <section className="relative w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10">
+      <section className="relative z-30 w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-40">
         {/* TODO: inserir a imagem por enquanto depois pegar e colocar o video */}
         <Image
           src="/images/below-hero-example.jpg"
@@ -44,7 +44,7 @@ export function VideoAbout() {
           whileInView="animate"
           viewport={{ once: true, amount: "some" }}
           variants={ContainerAnimation}
-          className="relative z-20 flex flex-col gap-y-6 items-center justify-center group cursor-pointer overflow-hidden"
+          className="relative z-50 flex flex-col gap-y-6 items-center justify-center group cursor-pointer overflow-hidden"
         >
           <motion.div
             variants={LineAnimation}
