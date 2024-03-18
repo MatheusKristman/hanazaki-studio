@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 import "@/app/globals.css";
 
@@ -37,6 +38,8 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${manrope.variable} bg-gray-primary overflow-x-hidden`}
       >
+        <Toaster />
+
         {children}
       </body>
     </html>
