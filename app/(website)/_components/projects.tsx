@@ -74,7 +74,7 @@ export function Projects() {
               href={`/projetos/detalhes/${project.id}`}
               className="poppins-font text-lg font-medium text-light-primary/60 flex items-center gap-x-2 sm:text-xl"
             >
-              Veja mais <ArrowRight />
+              Saiba mais sobre o projeto <ArrowRight />
             </Link>
           </motion.div>
         </motion.div>
