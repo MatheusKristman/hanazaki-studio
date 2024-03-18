@@ -30,7 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html
+      lang="pt-BR"
+      className="scrollbar-thumb-gold-primary scrollbar-thumb-rounded-full scrollbar-track-gray-primary scrollbar-thin"
+    >
       <body
         className={`${poppins.variable} ${manrope.variable} bg-gray-primary overflow-x-hidden`}
       >
