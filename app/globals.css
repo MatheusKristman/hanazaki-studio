@@ -78,6 +78,17 @@
   }
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #0e0e0e;
+  background: #b9a568;
+}
+
+::selection {
+  color: #0e0e0e;
+  background: #b9a568;
+}
+
 .poppins-font {
   font-family: var(--font-poppins);
   /* font-family: "Poppins", sans-serif; */
