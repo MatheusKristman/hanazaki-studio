@@ -64,7 +64,7 @@ export function MobileMenu() {
           size="icon"
           variant="link"
           onClick={handleOpenMenu}
-          className="flex lg:hidden"
+          className="flex lg:hidden disabled:opacity-100"
         >
           <Menu color="#B9A568" size="35px" />
         </Button>
@@ -86,6 +86,7 @@ export function MobileMenu() {
                   size="icon"
                   variant="link"
                   onClick={handleCloseMenu}
+                  className="disabled:opacity-100"
                 >
                   <X color="#B9A568" size="35px" />
                 </Button>
@@ -95,6 +96,7 @@ export function MobileMenu() {
                 <motion.div variants={MobileLinksAnimation}>
                   <Link
                     href="/"
+                    onClick={handleCloseMenu}
                     className={cn(
                       "poppins-font text-white text-2xl font-medium text-center transition-colors relative sm:text-3xl",
                       {
@@ -113,6 +115,7 @@ export function MobileMenu() {
                 <motion.div variants={MobileLinksAnimation}>
                   <Link
                     href="/sobre"
+                    onClick={handleCloseMenu}
                     className={cn(
                       "poppins-font text-white text-2xl font-medium text-center transition-colors relative sm:text-3xl",
                       {
@@ -153,7 +156,7 @@ export function MobileMenu() {
                     onClick={handleContact}
                     variant="link"
                     className={cn(
-                      "no-underline poppins-font text-white text-2xl font-medium text-center transition-colors relative sm:text-3xl",
+                      "no-underline poppins-font text-white text-2xl font-medium text-center transition-colors relative sm:text-3xl disabled:opacity-100",
                       {
                         "text-gold-primary before:content-[''] before:w-3 before:h-[1px] before:bg-gold-primary before:absolute before:top-1/2 before:-left-4 after:content-[''] after:w-3 after:h-[1px] after:bg-gold-primary after:absolute after:top-1/2 after:-right-4":
                           pathname === "/contato",
