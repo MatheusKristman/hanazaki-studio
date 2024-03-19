@@ -30,12 +30,12 @@ export function Hero() {
         </video>
       </div>
 
-      <div className="relative z-20 w-full h-full px-6 flex flex-col justify-center sm:px-16 lg:container lg:mx-auto">
+      <div className="relative z-20 w-full h-full px-6 flex flex-col justify-center sm:px-16 bg-hero-glows bg-no-repeat bg-contain bg-center lg:container lg:mx-auto">
         <motion.div
           initial="initial"
           animate="animate"
           variants={ContainerAnimation}
-          className="relative w-full flex flex-col items-center justify-center space-y-6 sm:items-center bg-glow-right bg-[length:120%_120%] bg-center bg-no-repeat"
+          className="relative w-full flex flex-col items-center justify-center space-y-6 sm:items-center"
         >
           <motion.div
             variants={TagAnimation}
@@ -64,35 +64,35 @@ export function Hero() {
 
           <motion.div
             variants={SubTitleAnimation}
-            className="w-full overflow-hidden flex items-center justify-center space-x-2 sm:space-x-4 before:content-[''] before:h-[1px] before:basis-full before:bg-gold-primary before:mr-2 sm:before:mr-4 after:content-[''] after:h-[1px] after:basis-full after:bg-gold-primary after:ml-2 sm:after:ml-4"
+            className="w-full overflow-hidden flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 sm:before:content-[''] sm:before:h-[1px] sm:before:basis-full sm:before:bg-gold-primary sm:before:mr-4 after:content-[''] sm:after:h-[1px] sm:after:basis-full sm:after:bg-gold-primary sm:after:ml-4"
           >
             <motion.p
               variants={SubTitleItemAnimation}
-              className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl"
+              className="manrope-font text-light-primary text-base lg:text-xl"
             >
               Tecnologia
             </motion.p>
 
             <motion.div
               variants={SubTitleLineAnimation}
-              className="h-6 w-[1px] bg-gold-primary lg:h-8"
+              className="h-6 w-[1px] min-w-[1px] bg-gold-primary lg:h-8"
             />
 
             <motion.p
               variants={SubTitleItemAnimation}
-              className="manrope-font text-sm text-light-primary sm:text-base lg:text-xl"
+              className="manrope-font text-light-primary text-base lg:text-xl"
             >
               Interatividade
             </motion.p>
 
             <motion.div
               variants={SubTitleLineAnimation}
-              className="h-6 w-[1px] bg-gold-primary lg:h-8"
+              className="h-6 w-[1px] min-w-[1px] bg-gold-primary lg:h-8"
             />
 
             <motion.p
               variants={SubTitleItemAnimation}
-              className="min-w-[107px] manrope-font text-sm text-light-primary text-nowrap sm:min-w-[123px] sm:text-base lg:min-w-[154px] lg:text-xl"
+              className="min-w-[107px] manrope-font text-light-primary text-nowrap sm:min-w-[123px] text-base lg:min-w-[154px] lg:text-xl"
             >
               Realidade virtual
             </motion.p>

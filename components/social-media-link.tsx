@@ -33,7 +33,7 @@ export function SocialMediaLink({
         href={href}
         target="_blank"
         rel="noreferrer noopenner"
-        className="hidden sm:flex items-center gap-4"
+        className="hidden sm:flex items-center space-x-4"
       >
         <Image
           src={imageSrc}
@@ -43,7 +43,7 @@ export function SocialMediaLink({
           className="object-contain object-center"
         />
 
-        <span className="manrope-font text-base text-light-primary">
+        <span className="manrope-font text-base text-light-primary sm:w-[140px] sm:min-w-[140px]">
           {text}
         </span>
       </a>

@@ -15,7 +15,7 @@ export function About() {
       variants={CardAnimation}
       className="w-full px-6 mt-12 sm:px-16 lg:container lg:mx-auto"
     >
-      <div className="w-full bg-gray-secondary flex flex-col items-center gap-4 px-6 py-9 rounded-lg sm:pl-12 sm:pr-60 sm:items-start sm:bg-about-logo sm:bg-no-repeat sm:bg-[100%_100%] lg:pr-96">
+      <div className="w-full bg-gray-secondary flex flex-col items-center space-y-4 px-6 py-9 rounded-lg sm:pl-12 sm:pr-60 sm:items-start sm:bg-about-logo sm:bg-no-repeat sm:bg-[100%_100%] lg:pr-96">
         <h2 className="poppins-font font-medium text-gold-primary text-xl text-center sm:text-3xl sm:text-left lg:text-4xl">
           Hanazaki Studio
         </h2>

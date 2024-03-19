@@ -16,7 +16,7 @@ import { AboutBio } from "./about-bio";
 export function AboutContent() {
   return (
     <section className="w-full px-6 mt-12 sm:px-16 lg:container lg:mx-auto">
-      <motion.div className="w-full flex flex-col items-center gap-y-4 mb-12">
+      <motion.div className="w-full flex flex-col items-center space-y-4 mb-12">
         <motion.h2
           initial="initial"
           whileInView="animate"
@@ -49,7 +49,7 @@ export function AboutContent() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={BelowContainerAnimation}
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 mb-4"
       >
         <motion.h2
           variants={BelowTitleAnimation}
@@ -69,11 +69,12 @@ export function AboutContent() {
           mercado brasileiro, mas também do cenário internacional.
         </motion.p>
 
-        <div className="relative w-full aspect-square -mt-24 max-w-sm sm:-mt-32">
+        <div className="relative -mt-24 max-w-sm sm:-mt-32">
           <Image
             src="/images/about-international.svg"
             alt="Parcerias internacionais"
-            fill
+            width={384}
+            height={384}
             priority
             className="object-contain object-center"
           />

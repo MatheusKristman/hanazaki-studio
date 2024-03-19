@@ -91,7 +91,7 @@ export function MobileMenu() {
                 </Button>
               </div>
 
-              <div className="flex flex-1 w-full flex-col items-center justify-center gap-y-9 sm:gap-y-12">
+              <div className="flex flex-1 w-full flex-col items-center justify-center space-y-9 sm:space-y-12">
                 <motion.div variants={MobileLinksAnimation}>
                   <Link
                     href="/"

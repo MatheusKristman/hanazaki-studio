@@ -29,7 +29,8 @@ export function VideoAbout() {
     <>
       <VideoModal isModalOpen={isModalOpen} CloseModal={CloseModal} />
 
-      <section className="relative z-30 w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-40">
+      {/* <section className="relative z-30 w-full aspect-video rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-40"> */}
+      <section className="relative z-30 w-full pt-[56.66%] rounded-[30px] overflow-hidden flex items-center justify-center lg:rounded-[60px] after:content-[''] after:w-full after:h-full after:bg-gray-primary/60 after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-40">
         {/* TODO: inserir a imagem por enquanto depois pegar e colocar o video */}
         <Image
           src={AboutImage}
@@ -47,11 +48,11 @@ export function VideoAbout() {
           whileInView="animate"
           viewport={{ once: true, amount: "some" }}
           variants={ContainerAnimation}
-          className="relative z-50 flex flex-col gap-y-6 items-center justify-center group cursor-pointer overflow-hidden"
+          className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col space-y-6 items-center justify-center group cursor-pointer overflow-hidden"
         >
           <motion.div
             variants={LineAnimation}
-            className="w-full h-[2px] bg-gold-primary self-start"
+            className="w-full h-[2px] min-h-[2px] bg-gold-primary self-start"
           />
 
           <motion.h2
@@ -72,7 +73,7 @@ export function VideoAbout() {
 
           <motion.div
             variants={LineAnimation}
-            className="w-full h-[2px] bg-gold-primary self-end"
+            className="w-full h-[2px] min-h-[2px] bg-gold-primary self-end"
           />
         </motion.div>
       </section>

@@ -14,35 +14,45 @@ const ServicesData = [
     desc: "Com nossos projetos em TV Touch, você pode criar um ambiente de vendas envolvente e memorável para seus clientes.",
     imageUrl: "/images/tv-touch.webp",
     className: "sm:col-start-1 sm:col-end-3",
-    imageClassName: "mb-4",
+    imageClassName: "!mb-4",
+    width: 512,
+    height: 288,
   },
   {
     title: "Realidade Virtual",
     desc: "Permita que seus clientes explorem e interajam com o empreendimento de forma imersiva e envolvente.",
     imageUrl: "/images/vr.png",
     className: "",
-    imageClassName: "mb-4",
+    imageClassName: "!mb-4",
+    width: 512,
+    height: 288,
   },
   {
     title: "Nuvem",
     desc: "Nossos projetos na nuvem permitem que seus clientes acessem diretamente a partir de seus dispositivos.",
     imageUrl: "/images/nuvem.png",
     className: "",
-    imageClassName: "mb-4",
+    imageClassName: "!mb-4",
+    width: 512,
+    height: 288,
   },
   {
     title: "Projetos Externos",
     desc: "Com os projetos externos, é possível visualizar o entorno e as comodidades do empreendimento, proporcionando uma visão completa do ambiente ao redor.",
     imageUrl: "/images/projetos-externos.png",
     className: "",
-    imageClassName: "mb-4",
+    imageClassName: "!mb-4",
+    width: 512,
+    height: 288,
   },
   {
     title: "Projetos Internos",
     desc: "Os ambientes internos proporcionam aos clientes a chance de deslumbrar-se com o novo imóvel, juntamente com a opção de personalização.",
     imageUrl: "/images/projetos-internos.png",
     className: "",
-    imageClassName: "mb-4",
+    imageClassName: "!mb-4",
+    width: 300,
+    height: 288,
   },
 ];
 
@@ -53,7 +63,7 @@ export function Services() {
       whileInView="animate"
       viewport={{ once: true }}
       variants={ServicesContainerAnimation}
-      className="w-full px-6 mt-12 flex flex-col items-center gap-y-6 sm:px-16 lg:mt-24 lg:container lg:mx-auto"
+      className="w-full px-6 mt-12 flex flex-col items-center space-y-6 sm:px-16 lg:mt-24 lg:container lg:mx-auto"
     >
       <motion.h2
         variants={ServicesTitleAnimation}
@@ -71,6 +81,8 @@ export function Services() {
             imageUrl={service.imageUrl}
             className={service.className}
             imageClassName={service.imageClassName}
+            width={service.width}
+            height={service.height}
           />
         ))}
       </div>

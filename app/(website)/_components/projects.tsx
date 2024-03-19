@@ -24,7 +24,7 @@ export function Projects() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={ContainerAnimation}
-        className="w-full flex flex-col gap-4 lg:flex-row lg:items-center"
+        className="w-full flex flex-col space-y-4 lg:flex-row lg:items-center"
       >
         <motion.div
           variants={IllustrationAnimation}

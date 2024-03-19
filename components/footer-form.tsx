@@ -50,8 +50,8 @@ export function FooterForm() {
 
   return (
     <Form {...form}>
-      <Element name="contact" className="mb-4 flex-grow max-w-md">
-        <form id="contact" onSubmit={form.handleSubmit(onSubmit)}>
+      <Element name="contact" className="mb-4 w-full max-w-md sm:mb-0">
+        <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
             control={form.control}
             name="name"

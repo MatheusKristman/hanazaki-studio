@@ -25,6 +25,7 @@ const config = {
         "about-banner-desktop": "url('/images/about-banner-desktop.png')",
         "glow-left": "url('/images/glow-left.svg')",
         "glow-right": "url('/images/glow-right.svg')",
+        "hero-glows": "url('/images/hero-glows.svg')",
       },
       colors: {
         "gray-primary": "#0E0E0E",

@@ -7,7 +7,7 @@ export function ProjectContent() {
         {project.title}
       </h3>
 
-      <div className="w-full flex flex-col items-center gap-4 mb-12 sm:items-start">
+      <div className="w-full flex flex-col items-center space-y-4 mb-12 sm:items-start">
         <h4 className="poppins-font font-medium text-lg text-gold-primary text-center sm:text-left sm:text-xl lg:text-2xl">
           Descrição
         </h4>
@@ -17,13 +17,13 @@ export function ProjectContent() {
         </p>
       </div>
 
-      <div className="w-full aspect-video">
+      <div className="relative w-full pt-[56.66%] min-[1410px]:pt-[715.5px]">
         <iframe
           id="vagonFrame"
           allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;"
           src={project.frameUrl}
           sandbox="allow-pointer-lock allow-same-origin allow-scripts"
-          className="w-full h-full"
+          className="w-full h-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
         />
       </div>
     </section>
