@@ -11,11 +11,12 @@ import {
   BelowTextAnimation,
   BelowContainerAnimation,
 } from "@/constants/framer/about-content-animations";
+import { AboutBio } from "./about-bio";
 
 export function AboutContent() {
   return (
     <section className="w-full px-6 mt-12 sm:px-16 lg:container lg:mx-auto">
-      {/* <motion.div className="w-full flex flex-col items-center gap-y-4 mb-12">
+      <motion.div className="w-full flex flex-col items-center gap-y-4 mb-12">
         <motion.h2
           initial="initial"
           whileInView="animate"
@@ -33,51 +34,39 @@ export function AboutContent() {
           variants={TextAnimation}
           className="manrope-font text-base text-light-primary text-center sm:text-lg lg:max-w-2xl"
         >
-          Aderir as novas tendencias do mercado não só nos proporciona um
-          diferencial dos outros, mas também uma garantia de estarmos à frente e
-          nunca sermos deixados para trás. Além disso, mudanças são comuns,
-          porém nenhum conhecimento anterior é totalmente perdido.
+          Nosso principal objetivo é impulsionar as vendas de imóveis na planta,
+          utilizando as mais modernas tecnologias disponíveis no mercado atual.
+          Dessa forma, buscamos proporcionar um diferencial competitivo para
+          nossos clientes no mercado imobiliário de alto padrão, onde nossa
+          empresa se destaca por sua especialização.
         </motion.p>
-      </motion.div> */}
+      </motion.div>
 
-      <AboutCarousel />
+      <AboutBio />
 
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         variants={BelowContainerAnimation}
-        className="w-full flex flex-col items-center"
+        className="w-full flex flex-col items-center mt-12"
       >
         <motion.h2
           variants={BelowTitleAnimation}
           className="poppins-font text-gold-primary text-2xl font-semibold text-center mb-4 sm:text-3xl"
         >
-          Expandindo Fronteiras através de Parcerias Internacionais
+          Parcerias internacionais
         </motion.h2>
 
         <motion.p
           variants={BelowTextAnimation}
           className="manrope-font text-base text-light-primary text-center mb-4 sm:text-lg lg:max-w-2xl"
         >
-          Formado em Engenharia Ambiental e Sanitária pela UNOESTE e atualmente
-          estudante de Engenharia Civil na UNIARA, descobri minha verdadeira
-          paixão na área de projetos com ênfase em renderização 3D. Desde então,
-          tenho me especializado em metodologia BIM e fotorrealismo, buscando
-          constantemente estar atualizado com as últimas novidades e tecnologias
-          do mercado.
-        </motion.p>
-
-        <motion.p
-          variants={BelowTextAnimation}
-          className="manrope-font text-base text-light-primary text-center sm:text-lg lg:max-w-2xl"
-        >
-          No momento, estou dedicando meu tempo ao aprendizado da Unreal Engine
-          5, focando especialmente na criação de plantas interativas e
-          experiências de realidade virtual para proporcionar aos clientes uma
-          visualização mais imersiva e envolvente dos projetos. Minha jornada
-          profissional é impulsionada pela busca contínua de excelência e
-          inovação na área de visualização arquitetônica.
+          Atualmente, a Hanazaki Studio atende às principais capitais do Brasil
+          e estabeleceu parcerias internacionais com outros estúdios, buscando
+          transformar tanto o mercado brasileiro quanto o internacional. Essa
+          iniciativa nos coloca constantemente na vanguarda não apenas do
+          mercado brasileiro, mas também do cenário internacional.
         </motion.p>
 
         <div className="relative w-full aspect-square -mt-24 max-w-sm sm:-mt-32">

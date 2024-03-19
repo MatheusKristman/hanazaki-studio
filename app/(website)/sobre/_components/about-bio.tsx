@@ -15,7 +15,7 @@ export function AboutBio() {
     <motion.div
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       variants={CardAnimation}
       className="w-full mt-12 px-6 sm:px-16 lg:container lg:mx-auto lg:mt-24"
     >
@@ -38,26 +38,15 @@ export function AboutBio() {
             variants={TextAnimation}
             className="manrope-font text-base text-light-primary text-center mb-6 sm:mb-4 sm:text-left"
           >
-            Graduado em Engenharia Ambiental e Sanitária pela UNOESTE e
-            atualmente cursando Engenharia Civil na UNIARA, encontrei minha
-            verdadeira paixão na área de projetos tridimensionais. Tenho me
-            dedicado ao aprimoramento em metodologia BIM e fotorrealismo,
-            buscando sempre estar atualizado com as últimas inovações do
-            mercado.
-          </motion.p>
-
-          <motion.p
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={TextAnimation}
-            className="manrope-font text-base text-light-primary text-center mb-6 sm:mb-0 sm:text-left"
-          >
-            No momento, estou imerso no aprendizado da Unreal Engine 5, com foco
-            na criação de plantas interativas e experiências de realidade
-            virtual. Minha jornada é marcada pela constante busca por novidades
-            e tecnologias que possam agregar valor aos projetos e proporcionar
-            uma experiência visual única aos clientes.
+            Fundador da Hanazaki Studio, eu trabalhava com visualização
+            arquitetônica com foco em renderização 3D e fotorrealismo, criando
+            imagens e vídeos. Posteriormente, descobri um novo modelo de
+            apresentação dentro desse mercado, que vai muito além da mera
+            visualização, envolvendo também a interatividade. Dessa forma,
+            reestruturamos o estúdio e todo o fluxo de trabalho para atender a
+            essa nova demanda do mercado. Agora, oferecemos passeios interativos
+            e aplicações que podem ser executadas na Web, desktops, TVs com tela
+            sensível ao toque e até mesmo em Realidade Virtual.
           </motion.p>
         </div>
 

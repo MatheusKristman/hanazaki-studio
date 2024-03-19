@@ -9,7 +9,6 @@ function AboutPage() {
       <AboutBanner />
       <AboutContent />
       <AboutTrades />
-      <AboutBio />
     </>
   );
 }
