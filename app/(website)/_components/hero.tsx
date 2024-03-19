@@ -49,7 +49,7 @@ export function Hero() {
 
           <motion.h1
             variants={TitleAnimation}
-            className="poppins-font text-4xl text-light-primary font-semibold text-center sm:text-5xl lg:text-7xl lg:leading-[1.1]"
+            className="poppins-font text-2xl text-light-primary font-semibold text-center sm:text-5xl lg:text-7xl lg:leading-[1.1]"
           >
             Onde a busca pelo{" "}
             <strong className="font-semibold bg-gradient-to-b from-[#D1BC7D] to-[#534A2F] inline-block text-transparent bg-clip-text">
