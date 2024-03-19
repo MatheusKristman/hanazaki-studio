@@ -1,3 +1,16 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://www.hanazakistudio.com/"
+    },
+    {
+      "source": "/sobre",
+      "destination": "https://www.hanazakistudio.com/sobre"
+    },
+    {
+      "source": "/projetos/detalhes/:id",
+      "destination": "https://www.hanazakistudio.com/projetos/detalhes/:id"
+    }
+  ]
 }
