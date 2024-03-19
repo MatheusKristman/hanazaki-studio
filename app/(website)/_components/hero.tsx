@@ -23,6 +23,8 @@ export function Hero() {
           loop
           muted
           autoPlay
+          playsInline
+          disablePictureInPicture
           className="w-full h-full object-cover object-center"
         >
           <source src="/hero-video.webm" type="video/webm" />
