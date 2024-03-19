@@ -11,7 +11,6 @@ export const CardAnimation = {
     transition: {
       duration: 1.5,
       type: "spring",
-      delay: 1.5,
     },
   },
 };
