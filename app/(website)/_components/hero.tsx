@@ -35,11 +35,11 @@ export function Hero() {
           initial="initial"
           animate="animate"
           variants={ContainerAnimation}
-          className="relative w-full flex flex-col items-center justify-center gap-y-6 sm:items-center after:content-[''] after:w-full after:aspect-square after:bg-glow-right after:bg-contain after:bg-center after:bg-no-repeat after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 lg:after:left-auto lg:after:-right-10 lg:after:translate-x-0 lg:after:-top-36 lg:after:translate-y-0 lg:after:w-2/3 before:content-[''] before:hidden lg:before:block lg:before:w-2/3 lg:before:aspect-square lg:before:bg-glow-left lg:before:bg-no-repeat lg:before:bg-contain lg:before:bg-center lg:before:absolute lg:before:-top-36 lg:before:-left-10"
+          className="relative w-full flex flex-col items-center justify-center space-y-6 sm:items-center bg-glow-right bg-[length:120%_120%] bg-center bg-no-repeat"
         >
           <motion.div
             variants={TagAnimation}
-            className="flex items-center justify-center gap-x-1 bg-gold-primary/25 px-4 py-1 rounded-md cursor-default"
+            className="flex items-center justify-center space-x-1 bg-gold-primary/25 px-4 py-1 rounded-md cursor-default"
           >
             <span className="uppercase poppins-font font-semibold !leading-none text-gold-primary text-sm text-center sm:mt-[2px] sm:text-base">
               Mergulhe na Futura Arquitetura
@@ -64,7 +64,7 @@ export function Hero() {
 
           <motion.div
             variants={SubTitleAnimation}
-            className="w-full overflow-hidden flex items-center justify-center gap-x-2 sm:gap-x-4 before:content-[''] before:h-[1px] before:basis-full before:bg-gold-primary after:content-[''] after:h-[1px] after:basis-full after:bg-gold-primary"
+            className="w-full overflow-hidden flex items-center justify-center space-x-2 sm:space-x-4 before:content-[''] before:h-[1px] before:basis-full before:bg-gold-primary before:mr-2 sm:before:mr-4 after:content-[''] after:h-[1px] after:basis-full after:bg-gold-primary after:ml-2 sm:after:ml-4"
           >
             <motion.p
               variants={SubTitleItemAnimation}
@@ -92,7 +92,7 @@ export function Hero() {
 
             <motion.p
               variants={SubTitleItemAnimation}
-              className="manrope-font text-sm text-light-primary text-nowrap sm:text-base lg:text-xl"
+              className="min-w-[107px] manrope-font text-sm text-light-primary text-nowrap sm:min-w-[123px] sm:text-base lg:min-w-[154px] lg:text-xl"
             >
               Realidade virtual
             </motion.p>
