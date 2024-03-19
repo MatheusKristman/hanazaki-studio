@@ -26,8 +26,8 @@ export function Hero() {
   }, [videoRef]);
 
   return (
-    <section className="w-full h-screen relative">
-      <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10 after:bg-gradient-to-b from-[#0e0e0e]/70 via-[#0e0e0e]/70 to-[#0e0e0e]">
+    <section className="w-full h-screen relative bg-hero-mobile bg-cover bg-center bg-no-repeat after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10 after:bg-gradient-to-b from-[#0e0e0e]/70 via-[#0e0e0e]/70 to-[#0e0e0e]">
+      <div className="hidden sm:block w-full h-full absolute top-0 left-0 right-0 bottom-0">
         <video
           ref={videoRef}
           loop
@@ -60,7 +60,7 @@ export function Hero() {
 
           <motion.h1
             variants={TitleAnimation}
-            className="poppins-font text-2xl text-light-primary font-semibold text-center sm:text-5xl lg:text-7xl lg:leading-[1.1]"
+            className="poppins-font text-2xl max-w-[275px] text-light-primary font-semibold text-center sm:text-5xl sm:max-w-none lg:text-7xl lg:leading-[1.1]"
           >
             Onde a busca pelo{" "}
             <strong className="font-semibold bg-gradient-to-b from-[#D1BC7D] to-[#534A2F] inline-block text-transparent bg-clip-text">

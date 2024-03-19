@@ -26,6 +26,7 @@ const config = {
         "glow-left": "url('/images/glow-left.svg')",
         "glow-right": "url('/images/glow-right.svg')",
         "hero-glows": "url('/images/hero-glows.svg')",
+        "hero-mobile": "url('/images/hero-mobile.png')",
       },
       colors: {
         "gray-primary": "#0E0E0E",
