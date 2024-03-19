@@ -18,18 +18,18 @@ import {
 
 const aboutData = [
   {
-    title: "Realidade Virtual",
+    title: "Explorando Novos Mundos: O Potencial da Realidade Virtual",
     text: [
-      "A Realidade Virtual revolucionou a forma como os projetos arquitetônicos são apresentados e compreendidos.",
-      "Uma das maiores vantagens da visualização arquitetônica por meio da Realidade Virtual é a capacidade de proporcionar uma sensação de escala e perspectiva autênticas, proporcionando uma percepção mais precisa das proporções, do layout e da atmosfera geral do projeto, ajudando a tomar decisões informadas.",
+      "A Realidade Virtual tem revolucionado a abordagem de apresentação e compreensão dos projetos arquitetônicos.",
+      "Uma das suas maiores vantagens é a capacidade de oferecer uma experiência imersiva única, proporcionando uma percepção autêntica de escala e perspectiva. Esta tecnologia permite uma compreensão mais profunda das proporções, layout e atmosfera geral do projeto, capacitando os envolvidos a tomarem decisões informadas e precisas, redefinindo assim os padrões de excelência na arquitetura contemporânea.",
     ],
   },
   {
-    title: "Passeio Virtual",
+    title: "Passeio Virtual: Uma Jornada Imersiva",
     text: [
-      "Com o passeio virtual, os clientes podem andar por todo o empreendimento e interagir com ele, acendendo e apagando as luzes, trocando a decoração dos ambientes, a cor dos mobiliários, suas texturas e muito mais.",
-      "Além disso, é possível ver como o sol irá afetar o empreendimento de forma real.",
-      "O passeio virtual tem a possibilidade de rodar no navegador dentro do seu próprio website, tanto em computadores quanto em dispositivos móveis.",
+      "Com o passeio virtual, os clientes têm a oportunidade de explorar integralmente o empreendimento, imergindo-se em uma experiência interativa única. Eles podem percorrer todos os espaços e interagir com eles, desde controlar as luzes até personalizar a decoração dos ambientes, modificando cores, mobiliário e texturas conforme suas preferências.",
+      "Além disso, oferecemos uma funcionalidade excepcional: a capacidade de visualizar o impacto da luz solar em tempo real no empreendimento, proporcionando uma compreensão completa de como o ambiente será afetado em diferentes momentos do dia.",
+      "Destaque ainda para a praticidade: nosso passeio virtual é acessível diretamente pelo navegador, tanto em computadores quanto em dispositivos móveis, permitindo que os clientes explorem o empreendimento de forma conveniente e intuitiva, sem a necessidade de downloads adicionais.",
     ],
   },
 ];
@@ -75,7 +75,7 @@ export function AboutCarousel() {
           variants={CardsAnimation}
           className={cn(
             "w-2 h-2 rounded-full bg-gray-secondary transition-colors",
-            { "bg-gold-primary": current === 1 },
+            { "bg-gold-primary": current === 1 }
           )}
         />
 
@@ -83,7 +83,7 @@ export function AboutCarousel() {
           variants={CardsAnimation}
           className={cn(
             "w-2 h-2 rounded-full bg-gray-secondary transition-colors",
-            { "bg-gold-primary": current === 2 },
+            { "bg-gold-primary": current === 2 }
           )}
         />
       </div>

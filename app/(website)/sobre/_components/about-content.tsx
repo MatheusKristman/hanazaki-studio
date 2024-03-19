@@ -53,19 +53,31 @@ export function AboutContent() {
           variants={BelowTitleAnimation}
           className="poppins-font text-gold-primary text-2xl font-semibold text-center mb-4 sm:text-3xl"
         >
-          Parcerias internacionais
+          Expandindo Fronteiras através de Parcerias Internacionais
         </motion.h2>
+
+        <motion.p
+          variants={BelowTextAnimation}
+          className="manrope-font text-base text-light-primary text-center mb-4 sm:text-lg lg:max-w-2xl"
+        >
+          Formado em Engenharia Ambiental e Sanitária pela UNOESTE e atualmente
+          estudante de Engenharia Civil na UNIARA, descobri minha verdadeira
+          paixão na área de projetos com ênfase em renderização 3D. Desde então,
+          tenho me especializado em metodologia BIM e fotorrealismo, buscando
+          constantemente estar atualizado com as últimas novidades e tecnologias
+          do mercado.
+        </motion.p>
 
         <motion.p
           variants={BelowTextAnimation}
           className="manrope-font text-base text-light-primary text-center sm:text-lg lg:max-w-2xl"
         >
-          Formado em Engenharia Ambiental e Sanitária pela UNOESTE e estudante
-          de Engenharia Civil pela UNIARA, descobri minha paixão na área de
-          projetos com foco em 3D, me especializando em metodologia BIM e em
-          fotorrealismo. Sempre buscando novidades e tecnologias no mercado,
-          atualmente estou aprendendo Unreal Engine 5, focando em apresentação
-          de plantas interativas e realidade virtual.
+          No momento, estou dedicando meu tempo ao aprendizado da Unreal Engine
+          5, focando especialmente na criação de plantas interativas e
+          experiências de realidade virtual para proporcionar aos clientes uma
+          visualização mais imersiva e envolvente dos projetos. Minha jornada
+          profissional é impulsionada pela busca contínua de excelência e
+          inovação na área de visualização arquitetônica.
         </motion.p>
 
         <div className="relative w-full aspect-square -mt-24 max-w-sm sm:-mt-32">

@@ -36,14 +36,28 @@ export function AboutBio() {
             whileInView="animate"
             viewport={{ once: true, amount: 0.1 }}
             variants={TextAnimation}
+            className="manrope-font text-base text-light-primary text-center mb-6 sm:mb-4 sm:text-left"
+          >
+            Graduado em Engenharia Ambiental e Sanitária pela UNOESTE e
+            atualmente cursando Engenharia Civil na UNIARA, encontrei minha
+            verdadeira paixão na área de projetos tridimensionais. Tenho me
+            dedicado ao aprimoramento em metodologia BIM e fotorrealismo,
+            buscando sempre estar atualizado com as últimas inovações do
+            mercado.
+          </motion.p>
+
+          <motion.p
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={TextAnimation}
             className="manrope-font text-base text-light-primary text-center mb-6 sm:mb-0 sm:text-left"
           >
-            Formado em Engenharia Ambiental e Sanitária pela UNOESTE e estudante
-            de Engenharia Civil pela UNIARA, descobri minha paixão na área de
-            projetos com foco em 3D, me especializando em metodologia BIM e em
-            fotorrealismo. Sempre buscando novidades e tecnologias no mercado,
-            atualmente estou aprendendo Unreal Engine 5, focando em apresentação
-            de plantas interativas e realidade virtual.
+            No momento, estou imerso no aprendizado da Unreal Engine 5, com foco
+            na criação de plantas interativas e experiências de realidade
+            virtual. Minha jornada é marcada pela constante busca por novidades
+            e tecnologias que possam agregar valor aos projetos e proporcionar
+            uma experiência visual única aos clientes.
           </motion.p>
         </div>
 
