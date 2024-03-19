@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/"
+      "destination": "https://www.hanazakistudio.com/"
     },
     {
       "source": "/sobre",
-      "destination": "/"
+      "destination": "https://www.hanazakistudio.com/sobre"
     },
     {
-      "source": "/projetos/detalhes/(.*)",
-      "destination": "/"
+      "source": "/projetos/detalhes/:path*",
+      "destination": "https://www.hanazakistudio.com/projetos/detalhes/:path*"
     }
   ]
 }
