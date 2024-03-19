@@ -51,7 +51,7 @@ export function Services() {
     <motion.section
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       variants={ServicesContainerAnimation}
       className="w-full px-6 mt-12 flex flex-col items-center gap-y-6 sm:px-16 lg:mt-24 lg:container lg:mx-auto"
     >
