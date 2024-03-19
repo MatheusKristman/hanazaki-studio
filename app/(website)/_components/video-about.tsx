@@ -57,7 +57,7 @@ export function VideoAbout() {
 
           <motion.h2
             variants={TextAnimation}
-            className="text-4xl text-center uppercase text-light-primary font-medium sm:text-5xl lg:text-6xl"
+            className="text-2xl text-center uppercase text-light-primary font-medium sm:text-5xl lg:text-6xl"
           >
             Dê vida às{" "}
             <strong className="font-medium text-gold-primary">ideias</strong>
