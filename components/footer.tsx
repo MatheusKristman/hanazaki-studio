@@ -50,7 +50,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="w-full mt-8 py-4 border-t border-light-primary px-6 flex flex-col space-y-4 items-center justify-between sm:flex-row sm:px-16">
+      <div className="w-full mt-8 py-4 border-t border-light-primary px-6 flex flex-col space-y-4 items-center justify-between sm:space-y-0 sm:flex-row sm:px-16">
         <span className="poppins-font text-sm text-light-primary font-medium sm:text-lg">
           Hanazaki Studio ©2024
         </span>
