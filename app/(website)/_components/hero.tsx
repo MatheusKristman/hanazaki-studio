@@ -25,7 +25,7 @@ export function Hero() {
           autoPlay
           className="w-full h-full object-cover object-center"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" />
         </video>
       </div>
 
