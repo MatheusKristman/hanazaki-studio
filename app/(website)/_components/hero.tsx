@@ -11,15 +11,25 @@ import {
   SubTitleItemAnimation,
 } from "@/constants/framer/hero-animations";
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoRef]);
+
   return (
     <section className="w-full h-screen relative">
       <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 after:content-[''] after:w-full after:h-full after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:z-10 after:bg-gradient-to-b from-[#0e0e0e]/70 via-[#0e0e0e]/70 to-[#0e0e0e]">
         <video
+          ref={videoRef}
           loop
           muted
           autoPlay
