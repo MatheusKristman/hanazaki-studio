@@ -32,15 +32,14 @@ export function VideoModal({ isModalOpen, CloseModal }: VideoModalProps) {
             variants={modalAnimation}
             className="w-full max-w-[1000px] aspect-video bg-white rounded-2xl inline-block align-middle overflow-hidden"
           >
-            {/* <Video src={VideoAbout} accentColor="#B9A568" /> */}
             <iframe
               className="w-full aspect-video"
-              src="https://www.youtube.com/embed/ijwo29jkdfU?si=Prdl_lFJmdW8XzUU"
+              src="https://www.youtube.com/embed/lyefRbJafuU?si=4wV02c_Ogh_4Jpa1"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-            ></iframe>
+            />
           </motion.div>
         </motion.div>
       )}
