@@ -30,7 +30,6 @@ export function VideoModal({ isModalOpen, CloseModal }: VideoModalProps) {
             animate="animate"
             exit="exit"
             variants={modalAnimation}
-            // className="w-full max-w-[1000px] aspect-video bg-white rounded-2xl inline-block align-middle overflow-hidden"
             className="relative w-full max-w-[1000px] max-h-[567.16px] pt-[56.66%] lg:pt-[567.16px] bg-white rounded-2xl inline-block align-middle overflow-hidden"
           >
             <iframe
