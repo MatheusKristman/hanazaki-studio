@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Element } from "react-scroll";
 import { toast } from "react-hot-toast";
+import axios from "axios";
 
 import { footerFormSchema } from "@/constants/schemas/footer-form-schema";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Axis3DIcon } from "lucide-react";
 
 export function FooterForm() {
   const [isSending, setIsSending] = useState<boolean>(false);
@@ -34,16 +36,17 @@ export function FooterForm() {
   function onSubmit(values: z.infer<typeof footerFormSchema>) {
     setIsSending(true);
 
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("Mensagem enviada com sucesso!");
-      }, 2000);
-    });
-
-    promise
+    axios
+      .post("/api/send-email", values)
       .then((res) => {
-        toast.success(res as string);
+        toast.success(res.data.message);
         form.reset();
+      })
+      .catch((error) => {
+        toast.error(
+          "Ocorreu um erro no envio da mensagem, tente novamente mais tarde"
+        );
+        console.error(error);
       })
       .finally(() => setIsSending(false));
   }
