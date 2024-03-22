@@ -27,7 +27,7 @@ export function About() {
           personalizados para cada cliente, com o objetivo de atender às suas
           principais exigências e alcançar suas metas. Venha conhecer as
           soluções que a Hanazaki Studio pode oferecer para o seu
-          empreendimento, alavanque suas vendes e conquiste seus clientes.
+          empreendimento, alavanque suas vendas e conquiste seus clientes.
         </p>
 
         <Link

@@ -54,7 +54,7 @@ export function Projects() {
             variants={TextAnimation}
             className="poppins-font text-2xl text-gold-primary mb-2 sm:text-3xl lg:text-4xl"
           >
-            Projeto R.P
+            Projeto R.P.
           </motion.h4>
 
           <motion.p
@@ -65,7 +65,7 @@ export function Projects() {
             e galeria. Além de uma aba de busca de unidades atualizada em tempo
             real. Com passeios virtuais integrados para explorar áreas comuns e
             apartamentos, com opções de interação, como mudanças de
-            revestimentos, mobiliário e cores, além de um modo de visualização
+            revestimentos, mobiliários e cores, além de um modo de visualização
             aérea para uma perspectiva geral.
           </motion.p>
 
