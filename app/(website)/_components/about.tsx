@@ -20,7 +20,27 @@ export function About() {
           Hanazaki Studio
         </h2>
 
-        <p className="manrope-font text-base text-light-primary text-center sm:text-left sm:text-lg">
+        <div className="flex flex-col gap-4">
+          <p className="lg:hidden manrope-font text-base text-light-primary text-center sm:text-left sm:text-lg">
+            Nossa equipe busca estar sempre atualizada com as tendências e
+            novidades do mercado, para oferecer aos nossos clientes as melhores
+            soluções em visualização arquitetônica.
+          </p>
+
+          <p className="lg:hidden manrope-font text-base text-light-primary text-center sm:text-left sm:text-lg">
+            Nossos serviços são únicos e personalizados para cada cliente, com o
+            objetivo de atender às suas principais exigências e alcançar suas
+            metas.
+          </p>
+
+          <p className="lg:hidden manrope-font text-base text-light-primary text-center sm:text-left sm:text-lg">
+            Venha conhecer as soluções que a Hanazaki Studio pode oferecer para
+            o seu empreendimento, alavanque suas vendas e conquiste seus
+            clientes.
+          </p>
+        </div>
+
+        <p className="hidden lg:block manrope-font text-base text-light-primary text-center sm:text-left sm:text-lg">
           Nossa equipe busca estar sempre atualizada com as tendências e
           novidades do mercado, para oferecer aos nossos clientes as melhores
           soluções em visualização arquitetônica. Nossos serviços são únicos e
