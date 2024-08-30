@@ -4,15 +4,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { ServicesCard } from "./services-card";
-import {
-  ServicesTitleAnimation,
-  ServicesContainerAnimation,
-} from "@/constants/framer/services-animations";
+import { ServicesTitleAnimation, ServicesContainerAnimation } from "@/constants/framer/services-animations";
 
 const ServicesData = [
   {
-    title: "Tv touch",
-    desc: "Com nossos projetos em TV Touch, você pode criar um ambiente de vendas envolvente e memorável para seus clientes.",
+    title: "Totem Interativo",
+    desc: "Com nossos projetos em Totem Interativo, você pode oferecer uma experiência de interação única e atrativa para seus clientes.",
     imageUrl: "/images/tv-touch.webp",
     className: "sm:col-start-1 sm:col-end-3",
     imageClassName: "!mb-4",

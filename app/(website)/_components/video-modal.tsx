@@ -1,9 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-import {
-  modalAnimation,
-  overlayAnimation,
-} from "@/constants/framer/video-modal-animation";
+import { modalAnimation, overlayAnimation } from "@/constants/framer/video-modal-animation";
 import { SyntheticEvent } from "react";
 
 interface VideoModalProps {
@@ -30,11 +27,11 @@ export function VideoModal({ isModalOpen, CloseModal }: VideoModalProps) {
             animate="animate"
             exit="exit"
             variants={modalAnimation}
-            className="relative w-full max-w-[1000px] max-h-[567.16px] pt-[56.66%] lg:pt-[567.16px] bg-white rounded-2xl inline-block align-middle overflow-hidden"
+            className="relative w-full max-w-[1000px] max-h-[567.16px] pt-[56.66%] lg:pt-[567.16px] bg-gray-primary rounded-2xl inline-block align-middle overflow-hidden"
           >
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/wC66L8CsRT4?si=ARfrYcJscUs-56bF"
+              src="https://www.youtube.com/embed/i16MZuxBALw?si=4JTv9CAKGAI6Fjpx"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

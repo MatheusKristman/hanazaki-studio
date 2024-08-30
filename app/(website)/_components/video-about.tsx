@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
-import AboutImage from "@/public/images/below-hero-example.jpg";
+import AboutImage from "@/public/images/below-hero-example.png";
 import { MouseEventHandler, SyntheticEvent, useState } from "react";
 
 import {
@@ -50,17 +50,13 @@ export function VideoAbout() {
           variants={ContainerAnimation}
           className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 flex flex-col space-y-6 items-center justify-center group cursor-pointer overflow-hidden"
         >
-          <motion.div
-            variants={LineAnimation}
-            className="w-full h-[2px] min-h-[2px] bg-gold-primary self-start"
-          />
+          <motion.div variants={LineAnimation} className="w-full h-[2px] min-h-[2px] bg-gold-primary self-start" />
 
           <motion.h2
             variants={TextAnimation}
             className="text-2xl text-center uppercase text-light-primary font-medium sm:text-5xl lg:text-6xl"
           >
-            Dê vida às{" "}
-            <strong className="font-medium text-gold-primary">ideias</strong>
+            Dê vida às <strong className="font-medium text-gold-primary">ideias</strong>
           </motion.h2>
 
           <motion.div variants={PlayAnimation}>
@@ -71,10 +67,7 @@ export function VideoAbout() {
             />
           </motion.div>
 
-          <motion.div
-            variants={LineAnimation}
-            className="w-full h-[2px] min-h-[2px] bg-gold-primary self-end"
-          />
+          <motion.div variants={LineAnimation} className="w-full h-[2px] min-h-[2px] bg-gold-primary self-end" />
         </motion.div>
       </section>
     </>
