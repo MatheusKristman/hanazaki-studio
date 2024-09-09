@@ -20,6 +20,7 @@ const config = {
     extend: {
       backgroundImage: {
         "about-logo": "url('/images/logo-black.svg')",
+        "about-banner": "url('/images/about-banner.png')",
         "about-banner-mobile": "url('/images/about-banner-mobile.png')",
         "about-banner-tablet": "url('/images/about-banner-tablet.png')",
         "about-banner-desktop": "url('/images/about-banner-desktop.png')",

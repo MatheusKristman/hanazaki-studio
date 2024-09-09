@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { ServicesCard } from "./services-card";
-import { ServicesTitleAnimation, ServicesContainerAnimation } from "@/constants/framer/services-animations";
+import {
+  ServicesTitleAnimation,
+  ServicesContainerAnimation,
+} from "@/constants/framer/services-animations";
 
 const ServicesData = [
   {
@@ -61,13 +64,14 @@ export function Services() {
     if (window.innerWidth < 1024) {
       const serv = [...services];
 
-      serv[0].imageUrl = "/images/tv-touch.png";
+      serv[0].imageUrl = "/images/totem.png";
+      serv[0].width = 300;
 
       setServices(serv);
     } else {
       const serv = [...services];
 
-      serv[0].imageUrl = "/images/tv-touch.webp";
+      serv[0].imageUrl = "/images/totem.webp";
 
       setServices(serv);
     }
