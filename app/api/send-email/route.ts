@@ -6,9 +6,9 @@ export async function POST(req: Request) {
     const { email, name, message } = await req.json();
 
     const transport = nodemailer.createTransport({
-      host: "smtp.hostinger.com",
-      port: 465,
-      secure: true,
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.EMAIL_USER!,
         pass: process.env.EMAIL_PASS!,
@@ -711,11 +711,8 @@ export async function POST(req: Request) {
     return Response.json({ message: "Mensagem enviada com sucesso!" });
   } catch (error) {
     console.log("[ERROR_SEND_EMAIL]", error);
-    return new Response(
-      "Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde",
-      {
-        status: 500,
-      }
-    );
+    return new Response("Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde", {
+      status: 500,
+    });
   }
 }
