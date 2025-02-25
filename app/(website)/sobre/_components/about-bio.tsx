@@ -3,7 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { CardAnimation, TitleAnimation, TextAnimation, ImageAnimation } from "@/constants/framer/about-bio-animations";
+import LeonardoHanazaki from "@/public/images/leonardo-hanazaki.jpg";
+
+import {
+  CardAnimation,
+  TitleAnimation,
+  TextAnimation,
+  ImageAnimation,
+} from "@/constants/framer/about-bio-animations";
 
 export function AboutBio() {
   return (
@@ -33,11 +40,14 @@ export function AboutBio() {
             variants={TextAnimation}
             className="manrope-font text-base text-light-primary text-center mb-6 md:mb-4 md:text-left"
           >
-            Fundador da Hanazaki Studio, eu trabalhava com visualização arquitetônica com foco em renderização 3D e
-            fotorrealismo, criando imagens e vídeos. Posteriormente, descobri um novo modelo de apresentação dentro
-            desse mercado, que vai muito além da mera visualização, envolvendo também a interatividade. Dessa forma,
-            reestruturamos o estúdio e todo o fluxo de trabalho para atender a essa nova demanda do mercado. Agora,
-            oferecemos passeios interativos e aplicações que podem ser executadas na Web, desktops, TVs com tela
+            Fundador da Hanazaki Studio, eu trabalhava com visualização
+            arquitetônica com foco em renderização 3D e fotorrealismo, criando
+            imagens e vídeos. Posteriormente, descobri um novo modelo de
+            apresentação dentro desse mercado, que vai muito além da mera
+            visualização, envolvendo também a interatividade. Dessa forma,
+            reestruturamos o estúdio e todo o fluxo de trabalho para atender a
+            essa nova demanda do mercado. Agora, oferecemos passeios interativos
+            e aplicações que podem ser executadas na Web, desktops, TVs com tela
             sensível ao toque e até mesmo em Realidade Virtual.
           </motion.p>
         </div>
@@ -53,10 +63,9 @@ export function AboutBio() {
 
           <div className="relative grow-[2] h-full">
             <Image
-              src="/images/leonardo-hanazaki.JPG"
+              src={LeonardoHanazaki}
               alt="Leonardo Hanazaki"
               fill
-              priority
               sizes="(max-width: 768px) 33vw, (max-width: 1200px) 33vw, 33vw"
               className="object-cover object-top scale-x-[-1]"
             />
